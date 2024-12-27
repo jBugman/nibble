@@ -3,7 +3,7 @@
 import gleam/int
 import gleam/io
 import gleam/order.{Eq, Gt, Lt}
-import gleam/regex
+import gleam/regexp
 import gleam/set
 import gleam/string
 import gleeunit/should
@@ -89,11 +89,11 @@ fn should(
 }
 
 fn lexer(_) -> List(Matcher(TokenT, Int)) {
-  let assert Ok(is_indent) = regex.from_string("^\\n[ \\t]*")
+  let assert Ok(is_indent) = regexp.from_string("^\\n[ \\t]*")
   let indentation = {
     use current_indent, lexeme, lookahead <- lexer.custom
 
-    case regex.check(is_indent, lexeme), lookahead {
+    case regexp.check(is_indent, lexeme), lookahead {
       False, _ -> NoMatch
       True, " " | True, "\t" -> Skip
       True, "\n" -> Drop(current_indent)
