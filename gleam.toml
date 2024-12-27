@@ -9,9 +9,11 @@ description = "A string parsing library combining a traditional lexer with parse
 repository = { type = "github", user = "hayleigh-dot-dev", repo = "gleam-nibble" }
 gleam = ">= 0.34.0"
 
+internal_modules = ["nibble/vendor/*"]
+
+
 [dependencies]
 gleam_stdlib = ">= 0.34.0 and < 1.0.0"
-glearray = ">= 1.0.0 and < 2.0.0"
 gleam_regexp = ">= 1.0.0 and < 2.0.0"
 
 [dev-dependencies]

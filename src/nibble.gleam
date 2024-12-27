@@ -5,8 +5,8 @@ import gleam/io
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
-import glearray.{type Array}
 import nibble/lexer.{type Span, type Token, Span, Token}
+import nibble/vendor/glearray.{type Array}
 
 // TYPES -----------------------------------------------------------------------
 
