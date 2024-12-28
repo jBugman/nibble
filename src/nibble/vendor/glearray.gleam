@@ -239,7 +239,7 @@ pub fn from_list(list: List(a)) -> Array(a)
 /// Converts an array to a list.
 ///
 @external(erlang, "erlang", "tuple_to_list")
-@external(javascript, "./gleam.mjs", "toList")
+@external(javascript, "../../gleam.mjs", "toList")
 pub fn to_list(array: Array(a)) -> List(a)
 
 /// Returns the number of elements in the array.
